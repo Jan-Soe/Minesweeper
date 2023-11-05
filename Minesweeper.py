@@ -15,7 +15,6 @@ class Map:
             for y in range(self.size_y):
                 if "{x},{y}".format(x=x,y=y) not in self.true_map:
                     self.true_map["{x},{y}".format(x=x,y=y)]= False
-        sorted(self.true_map.keys())
-        return dict(sorted(self.true_map.items()))
-map1 = Map(10,10,3)
+        return dict(self.true_map.items())
+map1 = Map(15,15,5)
 print(map1.create_map())
